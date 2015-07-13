@@ -1,0 +1,46 @@
+.error {
+  color: red;
+}
+
+section.primary {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+form.primary {
+  input {
+    display: block;
+  }
+  input[type="text"], input[type="password"], input[type="email"] {
+    width: 100%;
+    margin: 10px 0px;
+  }
+}
+
+input[type="text"], input[type="password"], input[type="email"], textarea {
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  padding: 5px;
+  font-family: FiraCode;
+  font-size: 10pt;
+}
+
+textarea {
+  margin: 0px;
+}
+
+input[type="submit"] {
+  border-radius: 3px;
+  outline: none;
+  border: none;
+  padding: 0px;
+  background: none;
+  color: grey;
+  font-size: 12pt;
+  font-family: FiraCode;
+}
+input[type="submit"]:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}

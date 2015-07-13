@@ -1,0 +1,14 @@
+<section class="primary">
+  <h1>Register</h1>
+  <form id="register" class="primary" action="/register" method="post">
+    <div class="error"></div>
+    <input type="text" id="first_name" class="half" placeholder="First Name">
+    <input type="text" id="last_name" class="half" placeholder="Last Name">
+    <input type="email" id="email" placeholder="Email">
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <textarea type="text" cols="48" rows="5" id="bio" placeholder="Your bio here..."></textarea>
+    <input type="hidden" id="_csrf_token" value="<%= get_csrf_token %>">
+    <input type="submit" value="Sign Up">
+  </form>
+</section>

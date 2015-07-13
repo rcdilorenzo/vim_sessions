@@ -1,0 +1,17 @@
+<section class="text-content">
+  <header class="top-bar">
+    <div class="title-box float-left">Home</div>
+    <div class="arrow-right"></div>
+    <div class="title-box no-content float-right"></div>
+    <div class="arrow-left float-right"></div>
+  </header>
+  <p>Welcome to vimsessions.com!</p>
+  <p>Feel free to watch our latest <a href="/latest">tip</a> or <a href="/donate">donate</a> to help us continue to bring great content to the community.</p>
+  <br>
+  <header class="bottom-bar">
+    <div class="title-box no-content float-left"></div>
+    <div class="arrow-right"></div>
+    <div class="title-box no-content float-right"></div>
+    <div class="arrow-left float-right"></div>
+  </header>
+</section>

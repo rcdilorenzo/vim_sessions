@@ -1,0 +1,10 @@
+<section class="primary">
+  <h1>Login</h1>
+  <div class="error"></div>
+  <form id="ajax" on-success="/" class="primary" action="/login" method="post">
+    <input type="text" name="email" placeholder="Email">
+    <input type="password" name="password" placeholder="Password">
+    <input type="hidden" name="_csrf_token" value="<%= get_csrf_token %>">
+    <input type="submit" value="Send">
+  </form>
+</section>

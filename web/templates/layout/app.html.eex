@@ -1,0 +1,37 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>vimsessions</title>
+  <meta name="description" content="vimsessions">
+  <meta name="author" content="Christian Di Lorenzo">
+
+  <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <header>
+    <h1 class="brand"><span class="green">vim</span>sessions</h1>
+    <nav>
+      <a href="/donate">donate</a>
+      <a href="/videos">videos</a>
+      <a href="/about">about</a>
+    </nav>
+  </header>
+  <main>
+    <section class="messages">
+      <p class="error" role="alert"><%= get_flash(@conn, :error) %></p>
+    </section>
+    <%= @inner %>
+  </main>
+  <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+  <script>require("web/static/js/app")</script>
+</body>
+</html>
+
