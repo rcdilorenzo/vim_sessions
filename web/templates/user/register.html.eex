@@ -1,7 +1,7 @@
 <section class="primary">
   <h1>Register</h1>
+  <div class="error"></div>
   <form id="register" class="primary" action="/register" method="post">
-    <div class="error"></div>
     <input type="text" id="first_name" class="half" placeholder="First Name">
     <input type="text" id="last_name" class="half" placeholder="Last Name">
     <input type="email" id="email" placeholder="Email">

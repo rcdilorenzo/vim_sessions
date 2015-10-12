@@ -13,4 +13,20 @@ defmodule Post do
     has_many :post_tags, PostTag
     has_many :tags, through: [:post_tags, :tag]
   end
+
+  def changeset(model, params \\ nil) do
+    params = Enum.reduce params, %{}, fn
+      ({key, ""}, map) -> map
+      ({key, value}, map) -> Map.put(map, key, value)
+    end
+    model |> cast(params, ~w(title description content author_id), ~w(video_url))
+  end
+
+  defimpl Poison.Encoder do
+    def encode(self, _) do
+      self |> Map.from_struct
+           |> Map.take([:title, :description, :video_url, :content])
+           |> Poison.encode!
+    end
+  end
 end

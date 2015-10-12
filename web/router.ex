@@ -14,27 +14,26 @@ defmodule VimSessions.Router do
   end
 
   scope "/", VimSessions do
-    pipe_through :browser # Use the default browser stack
+    pipe_through :browser
 
     get "/", IndexController, :index
+
+    get "/forbidden", ErrorController, :forbidden
 
     get "/login",    UserController, :login
     get "/register", UserController, :show_register
 
+    scope "/admin" do
+      resources "/posts", PostController
+    end
   end
 
   scope "/" do
     pipe_through :browser
 
-    # TODO: Don't add routes for the following that are sent to the root page
     addict :routes,
       register: [controller: VimSessions.UserController, action: :register],
       recover_password: [controller: IndexController, action: :index],
       reset_password: [controller: IndexController, action: :index]
   end
-
-  # Other scopes may use custom stacks.
-  # scope "/api", VimSessions do
-  #   pipe_through :api
-  # end
 end

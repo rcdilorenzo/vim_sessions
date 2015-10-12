@@ -28,6 +28,7 @@ defmodule VimSessions.Web do
 
       # Alias the data repository and import query/model functions
       alias VimSessions.Repo
+      alias VimSessions.Render
       import Ecto.Model
       import Ecto.Query, only: [from: 2]
 

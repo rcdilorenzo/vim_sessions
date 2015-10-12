@@ -5,6 +5,9 @@
 section.primary {
   max-width: 400px;
   margin: 0 auto;
+  &.large {
+    max-width: 700px;
+  }
 }
 
 form.primary {
@@ -43,4 +46,9 @@ input[type="submit"] {
 input[type="submit"]:hover {
   cursor: pointer;
   text-decoration: underline;
+}
+
+#epiceditor {
+  width: 100%;
+  padding: 5px;
 }

@@ -23,4 +23,12 @@ defmodule User do
      |> cast(params, ~w(first_name last_name username email bio))
      |> validate_format(:email, ~r/@/)
   end
+
+  defimpl Poison.Encoder do
+    def encode(self, _) do
+      self |> Map.from_struct
+           |> Map.take([:username, :email, :first_name, :last_name])
+           |> Poison.encode!
+    end
+  end
 end

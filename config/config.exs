@@ -20,7 +20,7 @@ config :logger, :console,
   metadata: [:request_id]
 
 config :addict,
-  not_logged_in_url: "/error",  # the URL where users will be redirected to
+  not_logged_in_url: "/forbidden",  # the URL where users will be redirected to
   db: VimSessions.Repo,
   user: User,
   manager: VimSessions.ManagerInteractor
