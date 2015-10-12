@@ -22,6 +22,10 @@ defmodule Post do
     model |> cast(params, ~w(title description content author_id), ~w(video_url))
   end
 
+  def latest do
+    from(p in Post, order_by: [desc: p.inserted_at], limit: 1) |> VimSessions.Repo.one!
+  end
+
   defimpl Poison.Encoder do
     def encode(self, _) do
       self |> Map.from_struct

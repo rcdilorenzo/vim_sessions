@@ -17,7 +17,7 @@
 
 <body>
   <header>
-    <h1 class="brand"><span class="green">vim</span>sessions</h1>
+    <h1 class="brand"><a href="/"><span class="green">vim</span>sessions</a></h1>
     <nav>
       <a href="/donate">donate</a>
       <a href="/videos">videos</a>

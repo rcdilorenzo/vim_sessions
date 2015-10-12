@@ -32,5 +32,5 @@ defmodule VimSessions.Endpoint do
     key: "_vim_sessions_key",
     signing_salt: "q5sT2nD8"
 
-  plug :router, VimSessions.Router
+  plug VimSessions.Router
 end

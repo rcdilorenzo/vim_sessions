@@ -18,7 +18,7 @@ defmodule VimSessions.Mixfile do
   def application do
     [mod: {VimSessions, []},
      applications: [:phoenix, :phoenix_html, :cowboy, :logger,
-                    :phoenix_ecto, :postgrex]]
+                    :phoenix_ecto, :postgrex, :earmark]]
   end
 
   # Specifies which paths to compile per environment
@@ -31,14 +31,15 @@ defmodule VimSessions.Mixfile do
   # Type `mix help deps` for examples and options
   defp deps do
     [
-      {:phoenix, "~> 0.14"},
+      {:phoenix, "~> 1.0.0"},
       {:phoenix_ecto, "~> 0.5"},
       {:postgrex, ">= 0.0.0"},
       {:phoenix_html, "~> 1.1"},
-      {:phoenix_live_reload, "~> 0.4", only: :dev},
+      {:phoenix_live_reload, "~> 1.0.1", only: :dev},
       {:cowboy, "~> 1.0"},
       {:faker, github: "igas/faker"},
-      {:addict, "~> 0.0.5"}
+      {:addict, "~> 0.0.5"},
+      {:earmark, "~> 0.1.17"}
     ]
   end
 end

@@ -7,6 +7,7 @@ defmodule VimSessions.Router do
     plug :fetch_session
     plug :fetch_flash
     plug :protect_from_forgery
+    plug :put_secure_browser_headers
   end
 
   pipeline :api do
@@ -17,14 +18,16 @@ defmodule VimSessions.Router do
     pipe_through :browser
 
     get "/", IndexController, :index
+    get "/about", IndexController, :about
 
     get "/forbidden", ErrorController, :forbidden
 
     get "/login",    UserController, :login
     get "/register", UserController, :show_register
+    resources "/posts", PostController, except: [:index]
 
     scope "/admin" do
-      resources "/posts", PostController
+      resources "/posts", AdminPostController, only: [:new, :create, :index]
     end
   end
 

@@ -1,12 +1,12 @@
 <section class="text-content">
   <header class="top-bar">
-    <div class="title-box float-left">Home</div>
+    <div class="title-box float-left">About</div>
     <div class="arrow-right"></div>
     <div class="title-box no-content float-right"></div>
     <div class="arrow-left float-right"></div>
   </header>
-  <p>Welcome to vimsessions.com!</p>
-  <p>Feel free to watch our latest <a href="/latest">tip</a> or <a href="/donate">donate</a> to help us continue to bring great content to the community.</p>
+  <p>Vimsessions is the simple concept of bringing helpful tips and tricks to those using and learning vim on a regular basis.</p>
+  <p>I'd love to hear your feedback on how you think we could improve this service to make it worth your investment of time. Please drop me a note at <a href="mailto:rcddeveloper@icloud.com">rcddeveloper@icloud.com</a>.</p>
   <br>
   <header class="bottom-bar">
     <div class="title-box no-content float-left"></div>
@@ -15,11 +15,3 @@
     <div class="arrow-left float-right"></div>
   </header>
 </section>
-
-<br>
-
-<article>
-  <h1><a href="<%= link_to @post, :show %>"><%= @post.title %></a></h1>
-  <p><%= @post.description %></p>
-  <a href="<%= link_to @post, :show %>">Read more -></a>
-</article>
