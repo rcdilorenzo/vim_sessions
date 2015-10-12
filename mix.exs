@@ -22,8 +22,9 @@ defmodule VimSessions.Mixfile do
   end
 
   # Specifies which paths to compile per environment
-  defp elixirc_paths(:test), do: ["lib", "web", "test/support"]
-  defp elixirc_paths(_),     do: ["lib", "web"]
+  defp elixirc_paths(:test), do: ~w(lib web factories test/support)
+  defp elixirc_paths(:dev), do: ~w(lib web factories tasks test/support)
+  defp elixirc_paths(_),     do: ~w(lib web)
 
   # Specifies your project dependencies
   #
@@ -36,6 +37,7 @@ defmodule VimSessions.Mixfile do
       {:phoenix_html, "~> 1.1"},
       {:phoenix_live_reload, "~> 0.4", only: :dev},
       {:cowboy, "~> 1.0"},
+      {:faker, github: "igas/faker"},
       {:addict, "~> 0.0.5"}
     ]
   end
