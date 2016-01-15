@@ -1,0 +1,5 @@
+<article>
+  <h1><%= @post.title %></h1>
+  <p><%= @post.description %></p>
+  <%= markdown(@post.content) %>
+</article>

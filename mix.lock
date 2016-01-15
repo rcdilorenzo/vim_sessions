@@ -5,7 +5,7 @@
   "decimal": {:hex, :decimal, "1.1.0"},
   "earmark": {:hex, :earmark, "0.1.17"},
   "ecto": {:hex, :ecto, "0.13.1"},
-  "faker": {:git, "git://github.com/igas/faker.git", "0220a937d75bc71cb8a08c6e626e07e55274f655", []},
+  "faker": {:git, "https://github.com/igas/faker.git", "0220a937d75bc71cb8a08c6e626e07e55274f655", []},
   "fs": {:hex, :fs, "0.9.2"},
   "mailgun": {:hex, :mailgun, "0.0.2"},
   "phoenix": {:hex, :phoenix, "1.0.3"},

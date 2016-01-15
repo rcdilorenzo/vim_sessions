@@ -13,6 +13,7 @@
 body {
   background-color: RGB(33, 33, 33);
   min-width: 500px;
+  margin: 0;
 }
 
 main {
@@ -192,3 +193,20 @@ img.rounded {
   border-radius: 50%;
 }
 
+/* Admin Banner */
+.banner {
+  background-color: red;
+  padding: 5px;
+  text-align: center;
+  vertical-align: middle;
+  color: white;
+  font-family: FiraCode;
+  margin-top: 0px;
+  a { color: white; }
+  form {
+    display: inline;
+  }
+  &.alert-info {
+    background-color: green;
+  }
+}

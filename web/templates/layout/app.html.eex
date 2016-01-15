@@ -16,6 +16,19 @@
 </head>
 
 <body>
+  <%= if current_user(@conn) do %>
+    <div class="banner">
+      Admin Access:
+      <%= link "posts", to: admin_post_path(@conn, :index) %>,
+      <%= link "logout", to: logout_path(@conn, :logout), method: :post %>
+    </div>
+  <% end %>
+  <%= if get_flash(@conn, :info) do %>
+    <p class="banner alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
+  <% end %>
+  <%= if get_flash(@conn, :error) do %>
+    <p class="banner alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+  <% end %>
   <header>
     <h1 class="brand"><a href="/"><span class="green">vim</span>sessions</a></h1>
     <nav>

@@ -49,6 +49,10 @@ defmodule VimSessions.Web do
 
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
+
+      def current_user(conn) do
+        Plug.Conn.get_session(conn, :current_user)
+      end
     end
   end
 

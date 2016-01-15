@@ -20,4 +20,12 @@ defmodule VimSessions.UserController do
            |> json %{error: ChangesetHelper.concat_errors(changeset, "\n")}
     end
   end
+
+  def logout(conn, params) do
+    {conn, %{message: message}} = Addict.SessionInteractor.logout(conn)
+    conn
+      |> put_flash(:info, message)
+      |> put_status(301)
+      |> redirect(to: "/")
+  end
 end

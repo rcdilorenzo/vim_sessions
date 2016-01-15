@@ -24,10 +24,10 @@ defmodule VimSessions.Router do
 
     get "/login",    UserController, :login
     get "/register", UserController, :show_register
-    resources "/posts", PostController, except: [:index]
+    resources "/posts", PostController, only: [:index, :show]
 
     scope "/admin" do
-      resources "/posts", AdminPostController, only: [:new, :create, :index]
+      resources "/posts", AdminPostController, only: [:edit, :new, :create, :index]
     end
   end
 
@@ -36,6 +36,7 @@ defmodule VimSessions.Router do
 
     addict :routes,
       register: [controller: VimSessions.UserController, action: :register],
+      logout: [controller: VimSessions.UserController, action: :logout],
       recover_password: [controller: IndexController, action: :index],
       reset_password: [controller: IndexController, action: :index]
   end
